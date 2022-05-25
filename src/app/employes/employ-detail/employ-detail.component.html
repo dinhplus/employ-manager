@@ -8,11 +8,11 @@
   <div class="details">
     <label>Name</label>
     <input class="form-control form-control-lg" type="text" [(ngModel)]="selectedEmploy.name" placeholder="Name" value="{{ selectedEmploy.name }}">
-    <label>Price</label>
-    <p class="price"><span>$</span><input class="form-control form-control-lg" type="number"
-       [(ngModel)]="selectedEmploy.price" placeholder="Price" value="{{ selectedEmploy.price }}">
+    <label>Salary</label>
+    <p class="salary"><span>$</span><input class="form-control form-control-lg" type="number"
+       [(ngModel)]="selectedEmploy.salary" placeholder="Salary" value="{{ selectedEmploy.salary }}">
     </p>
-    <app-employ-rating [selectedEmploy]="selectedEmploy"></app-employ-rating>
+    <app-employ-level [selectedEmploy]="selectedEmploy"></app-employ-level>
   </div>
 </div>
 <div class="changes" *ngIf="selectedEmploy">

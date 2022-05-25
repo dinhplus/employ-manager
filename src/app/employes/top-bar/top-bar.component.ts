@@ -15,7 +15,7 @@ export class TopBarComponent implements OnInit {
   }
 
   logout(): void {
-    this.route.navigate(['login']);
+    this.route.navigate(['']);
   }
 
 }

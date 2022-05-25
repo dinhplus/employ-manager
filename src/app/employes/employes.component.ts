@@ -32,9 +32,9 @@ export class EmployesComponent implements OnInit {
     this.getEmployes();
   }
 
-  add(name: string, price: number, rating: number): void {
+  add(name: string, salary: number, level: number): void {
     name = name.trim();
-    this.dataService.addEmploy({ name, price, rating } as unknown as Employ)
+    this.dataService.addEmploy({ name, salary, level } as unknown as Employ)
       .subscribe((employ: any) => {
         this.employes.push(employ);
       });

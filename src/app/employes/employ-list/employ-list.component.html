@@ -6,8 +6,11 @@
   </mat-toolbar>
 
   <mat-nav-list class="employ-list" color="accent">
-    <a mat-list-item *ngFor="let employ of employes" [ngClass]="{ 'selected': employ === selectedEmploy }" (click)="onSelect(employ)">{{ employ.name }} <span class="spacer"></span>
-    ${{ employ.price }}.00
+    <a mat-list-item *ngFor="let employ of employes" [ngClass]="{ 'selected': employ === selectedEmploy }" (click)="onSelect(employ)">
+      <img src='https://i.pravatar.cc/50?u={{employ.name}}'  class="avatar" >
+
+      {{ employ.name }} <span class="spacer"></span>
+    ${{ employ.salary }}
   <mat-divider [inset]="true"></mat-divider>
     </a>
   </mat-nav-list>

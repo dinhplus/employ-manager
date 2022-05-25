@@ -27,11 +27,11 @@ input {
   margin-bottom: 10px;
 }
 
-.price {
+.salary {
   display: flex;
 }
 
-.price span {
+.salary span {
   font-size: 25px;
   margin-right: 5px;
 }

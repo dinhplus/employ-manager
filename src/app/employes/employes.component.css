@@ -36,7 +36,7 @@ mat-form-field {
   height: 50%;
 }
 
-.rating-slider {
+.level-slider {
   margin: 20px 0 0 5px;
   width: 30%;
   display: flex;
@@ -44,7 +44,7 @@ mat-form-field {
   flex-direction: column;
 }
 
-.rating-slider label{
+.level-slider label{
   color: gray !important;
   margin-bottom: 0;
 }
