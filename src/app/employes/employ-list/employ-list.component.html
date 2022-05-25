@@ -1,0 +1,14 @@
+<div *ngIf="employes">
+  <mat-toolbar class="list-toolbar" color="primary">
+    <mat-toolbar-row>
+      <span>Employes</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-nav-list class="employ-list" color="accent">
+    <a mat-list-item *ngFor="let employ of employes" [ngClass]="{ 'selected': employ === selectedEmploy }" (click)="onSelect(employ)">{{ employ.name }} <span class="spacer"></span>
+    ${{ employ.price }}.00
+  <mat-divider [inset]="true"></mat-divider>
+    </a>
+  </mat-nav-list>
+</div>

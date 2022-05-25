@@ -1,0 +1,21 @@
+<div *ngIf="selectedEmploy">
+  <mat-toolbar class="details-toolbar" color="primary">
+    <span>Employ Details</span>
+    <span class="example-spacer"></span>
+    <span>{{ selectedEmploy.name }}&nbsp;(Employ ID - {{ selectedEmploy.id }})</span>
+  </mat-toolbar>
+
+  <div class="details">
+    <label>Name</label>
+    <input class="form-control form-control-lg" type="text" [(ngModel)]="selectedEmploy.name" placeholder="Name" value="{{ selectedEmploy.name }}">
+    <label>Price</label>
+    <p class="price"><span>$</span><input class="form-control form-control-lg" type="number"
+       [(ngModel)]="selectedEmploy.price" placeholder="Price" value="{{ selectedEmploy.price }}">
+    </p>
+    <app-employ-rating [selectedEmploy]="selectedEmploy"></app-employ-rating>
+  </div>
+</div>
+<div class="changes" *ngIf="selectedEmploy">
+  <button mat-raised-button class="save" title="Save changes" (click)="save()" style="background: green; color: white;">Save changes</button>
+  <button mat-raised-button class="cancel" title="Cancel changes" (click)="cancel()" style="background: orange; color: white">Cancel</button>
+</div>
